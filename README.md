@@ -80,6 +80,8 @@ Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 3
 
 <insert numeric_feature_plots for suspected 'Fare' outliers> 
 
+![numeric_feature_plotsFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/numeric_feature_plotsFare.png)
+
 'SibSp' and 'Parch' variables were also set up in the process to provide proxies for missing 'Age' data and for One Hot Encoding for the next sections. 
 
 ### Dropping data
@@ -88,6 +90,21 @@ Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 3
 ## Exploratory Data Analysis
 
 <insert bar and line charts>
+
+![Line_chart_survivedAge](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedAge.png)
+
+![Line_chart_survivedFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedFare.png)
+
+![Line_chart_survivedEmbarked](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedEmbarked.png)
+
+![Line_chart_survivedParch](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedParch.png)
+
+![Line_chart_survivedPclass](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedPclass.png)
+
+![Line_chart_survivedSex](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedSex.png)
+
+![Line_chart_survivedSibSp](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedSibSp.png)
+
 
 **Findings**: 
 - Less number of individuals survived than non-survivors
