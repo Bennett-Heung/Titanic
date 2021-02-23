@@ -1,5 +1,5 @@
 # Titanic
-Predicting survival of the Titanic sinking
+Predicting survival of the Titanic sinking.
 
 ## The Problem
 Many passengers did not survive the unfortunate sinking of the Titanic. The data and information of these passengers on at https://www.kaggle.com/c/titanic/overview. The following table indicates the variables in the provided data. 
