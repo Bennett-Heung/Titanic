@@ -58,18 +58,24 @@ Cleaning data involves finding and resolving missing data, duplicates, invalid d
 ### Missing data
 Proxies replaced missing data in the **'Age'**, **'Embarked'** and **'Fare'** variables across both loaded files. 
 - Missing **'Embarked'** data was proxied with the mode and missing **'Fare'** data was proxied with the median value. 
-- For **'Age'**, the missing data was proxied as the median age of individuals with matching *'Pclass'*,*'SibSp'* and *'Parch'*. It is clear that from observing the age distributions for each category in each relevant variable (see below), age distributions under each category for *'Pclass'*,*'SibSp'*. and *'Parch'* are distinct. Note that this is not the case for *'Embarked'*, *'Sex'* and *'Fare'*. 
+- For **'Age'**, the missing data was proxied as the median age of individuals with matching *'Pclass'*,*'SibSp'* and *'Parch'*. It is clear that from observing the age distributions for each category in each relevant variable (see below), age distributions under each category for *'Pclass'*,*'SibSp'*. and *'Parch'* are distinct. Note that this is not the case for *'Embarked'*, *'Sex'* and *'Fare'*. The visualisations below show age distributions by: mean and standard deviation (left), a box plot (middle), and a violin plot (right) for each variable. 
 
+*Embarked*
 ![categorical_feature_plotsEmbarked](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsEmbarked.png)
 
+*Fare*
 ![categorical_feature_plotsFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsFare.png)
 
+*Parch*
 ![categorical_feature_plotsParch](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsParch.png)
 
+*Pclass*
 ![categorical_feature_plotsPclass](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsPclass.png)
 
+*Sex*
 ![categorical_feature_plotsSex](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsSex.png)
 
+*SibSp*
 ![categorical_feature_plotsSibSp](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsSibSp.png)
 
 ### Duplicates
@@ -78,8 +84,7 @@ No duplicates were found.
 ### Invalid data
 Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 300 were removed, while 'Fare' values of 0 were left unchanged due to uncertainty behind reasoning of them in the dataset for such numerous individuals. 
 
-<insert numeric_feature_plots for suspected 'Fare' outliers> 
-
+*Distribution of passenger fares: distribution plot (left), box plot (right)*
 ![numeric_feature_plotsFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/numeric_feature_plotsFare.png)
 
 'SibSp' and 'Parch' variables were also set up in the process to provide proxies for missing 'Age' data and for One Hot Encoding for the next sections. 
@@ -88,21 +93,27 @@ Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 3
 'PassengerId', 'Name', 'Ticket and 'Cabin' (due to significant amounts of missing data) were not considered for the rest of the process. 
 
 ## Exploratory Data Analysis
+The following visualisations show the distributions of passengers who did survive ('Survived'=1) and not survive ('Survived'=0).
 
-<insert bar and line charts>
-
+*Age* 
 ![Line_chart_survivedAge](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedAge.png)
 
+*Fare*
 ![Line_chart_survivedFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedFare.png)
 
+*Embarked*
 ![bar_chart_survivedEmbarked](https://github.com/Bennett-Heung/Titanic/blob/main/images/bar_chart_survivedEmbarked.png)
 
+*Parch*
 ![bar_chart_survivedParch](https://github.com/Bennett-Heung/Titanic/blob/main/images/bar_chart_survivedParch.png)
 
+*Pclass*
 ![bar_chart_survivedPclass](https://github.com/Bennett-Heung/Titanic/blob/main/images/bar_chart_survivedPclass.png)
 
+*Sex*
 ![bar_chart_survivedSex](https://github.com/Bennett-Heung/Titanic/blob/main/images/bar_chart_survivedSex.png)
 
+*SibSp*
 ![bar_chart_survivedSibSp](https://github.com/Bennett-Heung/Titanic/blob/main/images/bar_chart_survivedSibSp.png)
 
 
@@ -115,7 +126,8 @@ Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 3
 - Most survivors embarked from Southampton, but in terms of proportion, passengers who embarked from Cherbourg were more likely to survive 
 - Not much to report on survival across age, however higher passenger fares showed more survival rates than lower passenger fares. 
 
-<insert correlation heatmap> 
+*Correlations Matrix*
+![corr_heatmap](https://github.com/Bennett-Heung/Titanic/blob/main/images/corr_heatmap.png)
 
 **Findings**:
 
