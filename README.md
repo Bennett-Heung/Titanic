@@ -116,7 +116,16 @@ The following models were built:
 - Random Forest Classifier
 - Gradient Boosting Classifier. 
 
-The Accuracy of the vanilla models closely ranged from 0.79 to 0.81. 
+The Accuracy of the vanilla models closely ranged from 0.778 to 0.815. 
+|                            |   Accuracy |
+|:---------------------------|-----------:|
+| GradientBoostingClassifier |   0.815318 |
+| SVC                        |   0.810842 |
+| RandomForestClassifier     |   0.805193 |
+| LogisticRegression         |   0.80405  |
+| KNeighborsClassifier       |   0.784955 |
+| DecisionTreeClassifier     |   0.778157 |
+
 
 The following table indicates the hyperparameters tuned for each model. 
 |                                 | models                                      | parameters                                                                                                                                   |
@@ -130,14 +139,14 @@ The following table indicates the hyperparameters tuned for each model.
 
 The following table shows the best models by highest Accuracy (using GridSearchCV), for each model after tuning hyperparameters. 
 
-|                            | Best_model_params                                          |   Best_model_score |
-|:---------------------------|:-----------------------------------------------------------|-------------------:|
-| GradientBoostingClassifier | {'learning_rate': 0.1, 'max_depth': 6, 'n_estimators': 50} |           0.826643 |
-| RandomForestClassifier     | {'max_depth': 10, 'n_estimators': 200}                     |           0.826624 |
-| DecisionTreeClassifier     | {'max_depth': 5}                                           |           0.825481 |
-| LogisticRegression         | {'C': 50}                                                  |           0.810811 |
-| SVC                        | {'C': 1, 'kernel': 'rbf'}                                  |           0.806348 |
-| KNeighborsClassifier       | {'n_neighbors': 3}                                         |           0.797353 |
+|                            | Best_model_params                                            |   Best_model_score |
+|:---------------------------|:-------------------------------------------------------------|-------------------:|
+| GradientBoostingClassifier | {'learning_rate': 0.01, 'max_depth': 6, 'n_estimators': 150} |           0.832203 |
+| RandomForestClassifier     | {'max_depth': 5, 'n_estimators': 200}                        |           0.82882  |
+| DecisionTreeClassifier     | {'max_depth': 4}                                             |           0.818701 |
+| LogisticRegression         | {'C': 100}                                                   |           0.814188 |
+| SVC                        | {'C': 1, 'kernel': 'rbf'}                                    |           0.810842 |
+| KNeighborsClassifier       | {'n_neighbors': 3}                                           |           0.790599 |
 
 **Gradient Boosting Classifier** *(learning_rate = 0.1, max_depth = 6, n_estimators = 50)* had the highest Accuracy score of 0.823 amongst all the best models. This model will be deployed to predict the test data.
 
@@ -145,7 +154,7 @@ The following table shows the best models by highest Accuracy (using GridSearchC
 
 The key feature importance variables in relation to survival were: gender (Sex_male), passenger fare (Fare), age (Age) and the Third Ticket Class (Pclass=3).
 
-## Deploy solution
+## Deploying solution
 
 The same process was used on test_data to prepare the data for the survival predictions, which includes:
 - Proxies for the missing Fare and Age data* 
