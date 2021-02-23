@@ -95,15 +95,15 @@ Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 3
 
 ![Line_chart_survivedFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedFare.png)
 
-![Line_chart_survivedEmbarked](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedEmbarked.png)
+![Bar_chart_survivedEmbarked](https://github.com/Bennett-Heung/Titanic/blob/main/images/Bar_chart_survivedEmbarked.png)
 
-![Line_chart_survivedParch](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedParch.png)
+![Bar_chart_survivedParch](https://github.com/Bennett-Heung/Titanic/blob/main/images/Bar_chart_survivedParch.png)
 
-![Line_chart_survivedPclass](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedPclass.png)
+![Bar_chart_survivedPclass](https://github.com/Bennett-Heung/Titanic/blob/main/images/Bar_chart_survivedPclass.png)
 
-![Line_chart_survivedSex](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedSex.png)
+![Bar_chart_survivedSex](https://github.com/Bennett-Heung/Titanic/blob/main/images/Bar_chart_survivedSex.png)
 
-![Line_chart_survivedSibSp](https://github.com/Bennett-Heung/Titanic/blob/main/images/Line_chart_survivedSibSp.png)
+![Bar_chart_survivedSibSp](https://github.com/Bennett-Heung/Titanic/blob/main/images/Bar_chart_survivedSibSp.png)
 
 
 **Findings**: 
