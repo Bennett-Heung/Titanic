@@ -1,21 +1,28 @@
 # Titanic
 Predicting survival of the Titanic sinking.
 
+The Titanic repository contains: 
+- 'data': has the raw train ('train.csv') and test ('test.csv') data 
+- 'Titanic.ipynb': the notebook for this repository
+- 'images': all the visualisations from 'Titanic.ipynb'
+- 'submission.csv': csv file of predictions.
+
 ## The Problem
 Many passengers did not survive the unfortunate sinking of the Titanic. The data and information of these passengers on at https://www.kaggle.com/c/titanic/overview. The following table indicates the variables in the provided data. 
 
 | Variable | Definition | Key |
 | ----------- | ----------- | ----------- |
-| survival | Survival | 0 = No, 1 = Yes|
-| pclass |	Ticket class |	1 = 1st, 2 = 2nd, 3 = 3rd|
-| sex |	Sex	|
+| PassengerId | Unique identifiers for the passengers |
+| Survival | Survival | 0 = No, 1 = Yes|
+| Pclass |	Ticket class |	1 = 1st, 2 = 2nd, 3 = 3rd|
+| Sex |	Sex	|
 | Age |	Age in years|
-| sibsp |	# of siblings / spouses aboard the Titanic|	
-|parch|	# of parents / children aboard the Titanic|
-|ticket|	Ticket number|	
-|fare|	Passenger fare|	
-|cabin|	Cabin number|	
-|embarked	| Port of Embarkation |	C = Cherbourg, Q = Queenstown, S = Southampton|
+| Sibsp |	# of siblings / spouses aboard the Titanic|	
+|Parch|	# of parents / children aboard the Titanic|
+|Ticket|	Ticket number|	
+|Fare|	Passenger fare|	
+|Cabin|	Cabin number|	
+|Embarked	| Port of Embarkation |	C = Cherbourg, Q = Queenstown, S = Southampton|
 
 **The objective is to predict which passengers were more likely to survive based on the information given in the train and test datasets**, named 'train.csv' and 'test.csv' respectively. 
 
@@ -48,20 +55,35 @@ Descriptive summaries below are for 'object', 'integer' and 'float' data types i
 ## Cleaning Data
 Cleaning data involves finding and resolving missing data, duplicates, invalid data and irrelevant data. 
 
+### Missing data
 Proxies replaced missing data in the **'Age'**, **'Embarked'** and **'Fare'** variables across both loaded files. 
-- For **'Age'**, the missing data was proxied as the median age of individuals with matching *'Pclass'*,*'SibSp'* and *'Parch'*.
 - Missing **'Embarked'** data was proxied with the mode and missing **'Fare'** data was proxied with the median value. 
+- For **'Age'**, the missing data was proxied as the median age of individuals with matching *'Pclass'*,*'SibSp'* and *'Parch'*. It is clear that from observing the age distributions for each category in each relevant variable (see below), age distributions under each category for *'Pclass'*,*'SibSp'*. and *'Parch'* are distinct. Note that this is not the case for *'Embarked'*, *'Sex'* and *'Fare'*. 
 
-<insert categorical_feature_plots for age proxy>
+![categorical_feature_plotsEmbarked](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsEmbarked.png)
 
+![categorical_feature_plotsFare](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsFare.png)
+
+![categorical_feature_plotsParch](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsParch.png)
+
+![categorical_feature_plotsPclass](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsPclass.png)
+
+![categorical_feature_plotsSex](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsSex.png)
+
+![categorical_feature_plotsSibSp](https://github.com/Bennett-Heung/Titanic/blob/main/images/categorical_feature_plotsSibSp.png)
+
+### Duplicates
 No duplicates were found. 
 
+### Invalid data
 Only invalid 'Fare' data was suspected. Outliers of 'Fare' values of more than 300 were removed, while 'Fare' values of 0 were left unchanged due to uncertainty behind reasoning of them in the dataset for such numerous individuals. 
 
 <insert numeric_feature_plots for suspected 'Fare' outliers> 
 
 'SibSp' and 'Parch' variables were also set up in the process to provide proxies for missing 'Age' data and for One Hot Encoding for the next sections. 
 
+### Dropping data
+'PassengerId', 'Name', 'Ticket and 'Cabin' (due to significant amounts of missing data) were not considered for the rest of the process. 
 
 ## Exploratory Data Analysis
 
